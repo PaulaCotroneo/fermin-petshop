@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fermín | Pet Shop</title>
+    <meta name= "description" content="Tienda para mascotas. Te brindamos una variedad de productos para que tu mascota sea la más feliz."> 
+    <meta name= "keywords" content="PETSHOP, TIENDA, MASCOTAS, PERROS, GATOS, ACCESORIOS, JUGUETES, COMEDEROS, COLLARES">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <!--Favicon-->   	
+    <link rel="icon" href="img/iconfermin.png" type="image/png"/>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Lato:wght@300;400;900&display=swap" rel="stylesheet">
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!--Animaciones Scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Link CSS-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Header-->
+    <header id="header" class="header contenedor">
+        <div class="header__logo">
+            <a href="index.html"><img src="img/logo.png" id="logo" alt="logo-fermin"/></a>
+        </div>
+        <nav class="navegacion">
+            <ul class="navegacion__menu">
+                <li><a href="#" id="navegacion__nosotros">Nosotros</a></li>
+                <li><a href="#" id="navegacion__tienda">Tienda</a></li>
+                <li><a href="#" id="navegacion__contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="carrito">
+            <button class="carrito__boton" type="submit">
+                <i class="fas fa-shopping-cart"></i>
+
+                <span class="carrito__cantidad">0</span>
+            </button>
+            <div id="carrito__contenido" class="oculto">
+                <table id="listaCarrito">
+                    <thead>
+                        <tr>
+                            <th>Imagen</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+                <hr>
+                <p id="carrito__totalAPagar">Total:</p>
+                <a href="#" id="vaciar-carrito" class="carrito__vaciarCarrito">Vaciar Carrito</a>
+                <a href="#" id="comprar-carrito" class="carrito__comprar">Comprar</a>
+            </div>
+        </div>
+    </header>
+    <!--FIN Header-->
+
+    <!--Portada-->
+    <div class="hero">
+        <div class="hero__contenido contenedor">
+                <h1>Bienvenidos a<br>
+                <span>Fermín Pet Shop!</span></h1>
+                <p>Descubre todos nuestros productos!</p>
+        </div>
+    </div> 
+    <!--FIN Portada-->
+
+    <!--Barra-->    
+    <div class="barra">
+        <div class="barra__iconos contenedor">
+                <div class="icono">
+                    <i class="fas fa-shopping-cart"></i><p>Tienda para mascotas</p>
+                </div>
+                <div class="icono">
+                    <i class="fas fa-map-marked-alt"></i><p>La Lucila, Vicente Lopez</p>
+                </div>
+                <div class="icono">
+                    <i class="fas fa-truck"></i><p>Envío Gratis compras + $2000</p>
+                </div>
+        </div>
+    </div>
+    <!--FIN Barra-->
+
+    <!--Sección Nosotros-->
+    <section class="seccion contenedor" id="nosotros">
+        <article class="imagen" data-aos="zoom-in">
+            <img src="img/fermin.png" alt="fermin"/>
+        </article>
+        <article class="informacion" data-aos="fade-up">
+            <h2 class= "informacion__titulo">Conoces al dueño de la marca?</h2>
+            <p class= "informacion__parrafo">Fermín fue adoptado el 05 de Setiembre del 2020, y hoy juntos, nos enorgullece invitarlos a visitar nuestra tienda de mascotas. </p>
+            <p class= "informacion__parrafo">Para que agasajes a tu más fiel compañero y amigo vamos a brindarte una atención personalizada y una variedad de productos para que tu mascota sea la más feliz.</p>
+        </article>
+    </section>
+    <!--FIN Nosotros--> 
+
+    <!--Tienda-->
+    <h2 class="encabezado centrado" id="tienda">Nuestros Productos Fermín Pet Shop</h2>
+    <div class="productos contenedor" id="lista-productos" data-aos="fade-up">
+        <!--Productos-->
+    </div>
+    <!--FIN Tienda-->
+    
+    <!--Seccion Testimonios-->
+    <h2 class="encabezado centrado">Comentarios de de nuestros clientes:</h2>
+    <div class="testimonios contenedor">
+        <!--Testimonios-->
+    </div>
+    <!--FIN Seccion Testimonios-->
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer__imagen">
+            <div class="contenedor">
+                <div class="footer__contenido">
+                        <nav id="contacto" class="footer__menu">
+                            <h2 class="menu-titulo">Contactanos!</h2>
+                            <p><i class="fab fa-whatsapp"></i> 11-6005-2520</p>
+                            <p><i class="fas fa-paper-plane"></i> fermin.petshop@gmail.com</p>
+                            <a href="https://www.instagram.com/fermin.petshop/" target="_blank"><i class="fab fa-instagram"></i> fermin.petshop</a>
+                            <a href="https://es-la.facebook.com/fermin.petshop/" target="_blank"><i class="fab fa-facebook"></i> fermin.petshop</a>
+                        </nav> 
+                </div> 
+            </div>
+        </div>
+        <div class="footer__barra">
+            <p class="footer__derechos centrado">© 2021 - Todos los derechos reservados.</p> 
+        </div>
+    </footer>
+    <!--FIN Footer-->
+
+    <!--BTN Flecha Volver-->
+    <div>
+        <a href="#" class="iconoVolver" data-aos="zoom-in"><i class="fas fa-chevron-circle-up"></i></a>
+    </div>
+    <!--FIN BTN Flecha Volver-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>    
+    <script src="./js/datos.js" type="text/javascript"></script>
+    <script src="./js/main.js" type="text/javascript"></script>
+    <script src="./js/carrito.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

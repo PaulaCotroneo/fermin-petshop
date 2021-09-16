@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Finalizar compra | Fermín</title>
+    <meta name= "description" content="Tienda para mascotas. Te brindamos una variedad de productos para que tu mascota sea la más feliz."> 
+    <meta name= "keywords" content="PETSHOP, TIENDA, MASCOTAS, PERROS, GATOS, ACCESORIOS, JUGUETES, COMEDEROS, COLLARES">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
+    <!--Favicon-->   	
+    <link rel="icon" href="img/iconfermin.png" type="image/png"/>
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Lato:wght@300;400;900&display=swap" rel="stylesheet"> 
+    <!--Iconos-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <!--Animaciones Scroll-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--Link CSS-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!--Header-->
+    <div class="bgFormulario">
+        <header class="header contenedor">
+            <div class="header__logo">
+                <a href="index.html"><img src="img/logo.png" alt="logo-fermin"/></a>
+            </div>
+        </header>
+        <!--FIN Header-->
+
+        <!--Sección Finalizar Pedido-->
+        <!--Tarjeta-->
+        <div class="contenedor">
+            <h2 class="encabezado centrado">Finalizar compra:</h2>
+            <section class="tarjeta" id="tarjeta">
+                <div class="delantera">
+                    <img src="img/chip-tarjeta.png" class="chip" alt="">
+                    <div class="datos">
+                        <div class="grupo" id="numero">
+                            <p class="label">Número Tarjeta</p>
+                            <p class="numero">#### #### #### ####</p>
+                        </div>
+                        <div class="flexbox">
+                            <div class="grupo" id="nombre">
+                                <p class="label">Nombre Tarjeta</p>
+                                <p class="nombre">Carlos Lopez</p>
+                            </div>
+
+                            <div class="grupo" id="expiracion">
+                                <p class="label">Expiración</p>
+                                <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="trasera">
+                    <div class="barra-magnetica"></div>
+                    <div class="datos">
+                        <div class="grupo" id="firma">
+                            <p class="label">Firma</p>
+                            <div class="firma"><p></p></div>
+                        </div>
+                        <div class="grupo" id="ccv">
+                            <p class="label">CCV</p>
+                            <p class="ccv"></p>
+                        </div>
+                    </div>
+                    <p class="leyenda">De hallarse esta tarjeta, se agradecerá devolverla al Banco representante mas cercano. Esta tarjeta es instransferible y para uso exclusivo del titular. Válida entre las fechas indicadas.</p>
+                </div>
+            </section>
+
+            <!--Boton Abrir Formulario-->
+            <div class="contenedor-btn">
+                <button class="btn-abrir-formulario" id="btn-abrir-formulario">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <!--Formulario-->
+            <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+                <div class="grupo">
+                    <label for="inputNumero">Número Tarjeta</label>
+                    <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+                </div>
+                <div class="grupo">
+                    <label for="inputNombre">Nombre</label>
+                    <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+                </div>
+                <div class="flexbox">
+                    <div class="grupo expira">
+                        <label for="selectMes">Expiracion</label>
+                        <div class="flexbox">
+                            <div class="grupo-select">
+                                <select name="mes" id="selectMes">
+                                    <option disabled selected>Mes</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                            <div class="grupo-select">
+                                <select name="year" id="selectYear">
+                                    <option disabled selected>Año</option>
+                                </select>
+                                <i class="fas fa-angle-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grupo ccv">
+                        <label for="inputCCV">CCV</label>
+                        <input type="text" id="inputCCV" maxlength="3">
+                    </div>
+                </div>
+                <button type="submit" class="btn-enviar">Confirmar compra</button>
+            </form>
+        </div>
+    </div>
+    <!--FIN Sección Finalizar Pedido-->
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer__imagen">
+            <div class="contenedor">
+                <div class="footer__contenido">
+                    <nav class="footer__menu">
+                        <h2 class="menu-titulo">Contactanos!</h2>
+                        <p><i class="fab fa-whatsapp"></i> 11-6005-2520</p>
+                        <p><i class="fas fa-paper-plane"></i> fermin.petshop@gmail.com</p>
+                        <a href="https://www.instagram.com/fermin.petshop/" target="_blank"><i class="fab fa-instagram"></i> fermin.petshop</a>
+                        <a href="https://es-la.facebook.com/fermin.petshop/" target="_blank"><i class="fab fa-facebook"></i> fermin.petshop</a>
+                    </nav> 
+                </div> 
+            </div>
+        </div>
+        <div class="footer__barra">
+            <p class="footer__derechos centrado">© 2021 - Todos los derechos reservados.</p> 
+        </div>
+    </footer>
+    <!--FIN Footer-->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./js/formulario.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.5/dist/sweetalert2.all.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

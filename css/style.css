@@ -1,0 +1,748 @@
+html {
+  box-sizing: border-box; 
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit; 
+}
+body {
+  font-family: "Lato"; 
+  background-color: #f9f4f1;
+}
+p {
+  font-family: "Lato"; 
+  font-weight: 300;
+  font-size: 1.2rem;
+  color: #121212;
+}
+.contenedor {
+  max-width: 1100px;
+  width: 80%;
+  margin: 0 auto; 
+}
+img {
+  max-width: 100%; 
+}
+.centrado {
+  text-align: center;
+}
+.oculto {
+  display: none;
+}
+
+/** Flecha Volver **/
+.iconoVolver {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  color: #e4745c;
+  z-index: 900; 
+}
+.iconoVolver i {
+  font-size: 1.5rem; 
+}
+.iconoVolver i:hover {
+  color: #ffa188; 
+}
+
+/** Header **/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+.header .header__logo {
+  padding: .5rem 0; 
+}
+.header__logo img {
+  height: 15vh;
+}
+.navegacion__menu {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none; 
+  text-align: center;
+  padding: 0;
+}
+.navegacion__menu a {
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 300;
+  color: #121212;
+  text-transform: uppercase;
+  text-decoration: none; 
+}
+.navegacion__menu a:hover {
+  color: #ffc331;
+}
+
+@media only screen and (min-width: 768px) {
+  .navegacion__menu {
+    flex-direction: row; 
+  } 
+  .navegacion {
+    width: 60%;
+  }
+  .iconoVolver {
+    right: 2rem;
+    bottom: 2rem; 
+  }
+  .iconoVolver i {
+    font-size: 2.5rem; 
+  }
+}
+
+/** Header Carrito **/
+.carrito {
+  position: relative; 
+}
+.carrito i {
+  font-size: 1.5rem; 
+  color: #121212;
+}
+.carrito__boton {
+  border: 1px solid #f9f4f1;
+  border-radius: 5px;
+  background-color: #f9f4f1;
+  max-width: 10rem;
+  margin: 0;
+  padding:0;
+}
+.carrito__boton:hover {
+  color: #ffc331;
+}
+.carrito .carrito__cantidad {
+  background: #ffc331;
+  border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  color: #ffffff;
+  display: inline-block;
+  line-height: 1.6rem;
+  font-weight: 400;
+  text-align: center;
+  width: 1.5em; 
+}
+.carrito .borrar-producto {
+  background: #fc1c1c;
+  border-radius: 0.8rem;
+  -moz-border-radius: 0.8rem;
+  -webkit-border-radius: 0.8rem;
+  color: #ffffff;
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  text-align: center;
+  width: 1.5rem; 
+  text-decoration: none; 
+}
+.carrito #carrito__contenido {
+  display: none; 
+}
+.carrito:hover #carrito__contenido {
+  display: block;
+  position: absolute;
+  right: 0;
+  background-color: #FFFFFF;
+  padding: 1rem;
+  width: 450px; 
+}
+.carrito:hover #carrito__contenido .carrito__vaciarCarrito {
+  background-color: #ffc331;
+  padding: .5rem 1rem;
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none; 
+}
+.carrito #carrito__contenido .carrito__comprar {
+  background-color: #00aa33;
+  margin-top: 1rem;
+  padding: .5rem 1rem;
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none; 
+}
+#listaCarrito tr {
+  width: 100%;
+  padding: .1rem 1rem;
+  text-align: center;
+  font-size: .9rem;
+  color: #313131;
+}
+#listaCarrito th {
+  font-family: "Lato";
+  font-weight: 900;
+  margin: 1rem;
+}
+#carrito__contenido table {
+  width: 100%; 
+}
+#carrito__contenido hr {
+  width: 100%; 
+  color: #818181;
+}
+#carrito__totalAPagar {
+  font-weight: 900;
+  text-align: right;
+  color: #313131;
+}
+
+/** Portada **/
+.hero {
+  background-image: url(../img/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 80vh;
+  color: #121212;
+  align-items: center;
+  display: flex; 
+}
+.hero .hero__contenido h1 {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 2rem; 
+  margin: 0;
+}
+.hero .hero__contenido span {
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 2rem; 
+  color: #ffc331;
+  margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero .hero__contenido h1 {
+    font-size: 3rem; 
+  }
+  .hero .hero__contenido span {
+    font-size: 3rem; 
+  }
+}
+
+/** Barra **/
+.barra {
+  min-height: 5rem;
+  background: #ffc331;
+  color: #121212;
+}
+.barra .barra__iconos {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem 0; 
+}
+.barra .barra__iconos .icono {
+  flex: 1;
+  background-repeat: no-repeat;
+  background-position: left center;
+  text-align: center;
+}
+.barra .barra__iconos .icono p {
+  font-family: "Lato";
+  font-weight: 400;
+}
+.icono i {
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 1024px) {
+  .barra .barra__iconos {
+    flex-direction: row; 
+  } 
+}
+
+/** Seccion Nosotros **/
+.seccion {
+  padding: 5rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+}
+.informacion {
+  width: 100%;
+  padding: 3.7rem;
+}
+.informacion__titulo {
+  font-family: "Lato";
+  font-size: 2rem;
+  font-weight: 900;
+  color: #121212;
+  margin-bottom: 1.25rem; 
+}
+.informacion__parrafo {
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 1.2rem; 
+}
+
+@media only screen and (min-width: 1024px) {
+  .seccion {
+    flex-direction: row; 
+  } 
+  .informacion {
+    width: 50%;
+    padding: 3.7rem;
+  }
+}
+
+/** Productos **/
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; 
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.productos .producto {
+  flex: 0 1 calc(50% - 1rem);
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  border: 1px solid #e1e1e1; 
+}
+.producto .producto__imagen {
+  width: 100%; 
+}
+.productos .producto .producto__informacion {
+  padding: 1rem 1rem; 
+  color: #121212;
+}
+.productos .producto .producto__informacion i {
+  font-size: 1.5rem;
+  color: #121212;
+}
+.productos .producto .producto__informacion input {
+  width: 20%;
+  font-family: "Lato";
+  font-weight: 300;
+}
+.productos .producto .producto__informacion h4 {
+  margin: 0;
+  font-size: 1.2rem; 
+  color: #121212;
+}
+.producto__informacion p {
+  font-size: .9rem; 
+}
+.producto__informacion label {
+  font-family: "Lato";
+  font-weight: 400;
+  font-size: .9rem; 
+  color: #121212;
+}
+.producto__btnAgregarCarrito {
+  background-color: #ffc331;
+  padding: .5rem 1rem;
+  display: block;
+  text-align: center;
+  color: #FFFFFF;
+  text-decoration: none; 
+}
+.producto__btnAgregarCarrito:hover {
+  background-color: #121212;
+}
+.producto__precio {
+  display: flex;
+  justify-content: space-between; 
+}
+.producto__precio .precio {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #121212;
+}
+.producto__precio .oferta {
+  text-decoration: line-through;
+  font-size: 1.1rem;
+  font-weight: 300; 
+  color: #6b6b6b;
+}
+
+@media only screen and (min-width: 768px) {
+  .productos .producto {
+    flex: 0 1 calc(33% - 1rem); 
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .productos .producto {
+    flex: 0 1 calc(25% - 1rem); 
+  } 
+}
+
+/** Clientes **/
+.testimonios {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start; 
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+}
+.testimonios .cliente {
+  width: 100%;
+  background-color: #ffffff;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 30px -7px #a7a7a7;
+}
+.testimonios .cliente .cliente__informacion {
+  padding: 1rem 1rem; 
+  color: #121212;
+  margin: 2rem 2rem;
+}
+.testimonios .cliente .cliente__informacion h4 {
+  margin: 0;
+  font-size: 1.2rem; 
+  color: #ffc331;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.cliente__informacion p {
+  font-size: 1.2rem; 
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .testimonios .cliente .cliente__informacion {
+    margin: 2rem 3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .testimonios .cliente .cliente__informacion {
+    margin: 2rem 4rem;
+  }
+}
+
+/** Footer **/
+.footer .footer__imagen {
+  background-image: url(../img/footer.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  min-height: 80vh;
+  color: #121212;
+  align-items: center;
+  display: flex; 
+}
+.footer .footer__contenido {
+  display: flex;
+  flex-direction: column; 
+  padding-top: 5rem;
+}
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem; 
+}
+.footer__menu a {
+  color: #121212;
+  text-decoration: none;
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.footer__menu p {
+  color: #121212;
+  text-decoration: none;
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.footer__menu i {
+  font-size: 1.5rem;
+  margin-right: .9rem; 
+}
+.menu-titulo {
+  font-family: "Lato";
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #121212;
+  margin-bottom: 1.25rem; 
+}
+.footer__barra {
+  margin: 0;
+  min-height: 5rem;
+  background: #121212;
+}
+.footer__derechos {
+  color: #ffffff;
+  font-family: "Lato";
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+@media only screen and (min-width: 480px) {
+  .footer {
+    background-position: center center;
+    min-height: 40vh;
+  }
+  .footer .footer__contenido {
+    flex-direction: row; 
+  } 
+  .footer__menu {
+    flex: 1; 
+  } 
+}
+
+@media only screen and (min-width: 1024px) {
+  .footer {
+    background-position: center bottom;
+    min-height: 80vh;
+  }
+  .footer__menu {
+    flex: 0 1 calc(30% - 1rem); 
+  } 
+}
+
+/** Finalizar Pedido **/
+.bgFormulario {
+  background-image: url(../img/form.jpg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  height: 100vh;
+  margin-bottom: 4rem;
+}
+
+/** Tarjeta **/
+.tarjeta {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	max-width: 550px;
+	position: relative;
+	color: #fff;
+	transition: .3s ease all;
+	transform: rotateY(0deg);
+	transform-style: preserve-3d;
+	cursor: pointer;
+	z-index: 2;
+}
+.tarjeta.active {
+	transform: rotateY(180deg);
+}
+.tarjeta > div {
+	padding: 30px;
+	border-radius: 15px;
+	min-height: 315px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	box-shadow: 0 6px 6px 0 rgba(90, 90, 90, 0.3);
+}
+
+/** Tarjeta Frente **/
+.tarjeta .delantera {
+	width: 100%;
+  background: url(../img/bg-tarjeta.jpg);
+	background-size: cover;
+}
+.delantera .chip {
+	width: 100%;
+	max-width: 50px;
+	margin-bottom: 20px;
+}
+.delantera .grupo .label {
+	font-size: 16px;
+	color: #bebebe;
+	margin-bottom: 5px;
+}
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion {
+	color: #ffffff;
+  font-family: "Lato";
+	font-size: 22px;
+	text-transform: uppercase;
+}
+.delantera .flexbox {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+/** Tarjeta Dorso **/
+.trasera {
+	background: url(../img/bg-tarjeta.jpg);
+	background-size: cover;
+	position: absolute;
+	top: 0;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+.trasera .barra-magnetica {
+	height: 40px;
+	background: #000;
+	width: 100%;
+	position: absolute;
+	top: 30px;
+	left: 0;
+}
+.trasera .datos {
+	margin-top: 60px;
+	display: flex;
+	justify-content: space-between;
+}
+.trasera .datos p {
+  color: #bebebe;
+  font-family: "Lato";
+	margin-bottom: 5px;
+}
+.trasera .datos #firma {
+	width: 70%;
+}
+.trasera .datos #firma .firma {
+	height: 40px;
+	background: repeating-linear-gradient(skyblue 0, skyblue 5px, orange 5px, orange 10px);
+}
+.trasera .datos #firma .firma p {
+	line-height: 40px;
+	font-family: 'Reenie Beanie';
+	color: #000;
+	font-size: 30px;
+	padding: 0 10px;
+	text-transform: capitalize;
+}
+.trasera .datos #ccv {
+	width: 20%;
+}
+.trasera .datos #ccv .ccv {
+	background: #fff;
+	height: 40px;
+	color: #000;
+	padding: 8px;
+	text-align: center;
+}
+.trasera .leyenda {
+  color: #bebebe;
+	font-size: 10px;
+	line-height: 24px;
+}
+
+/** Boton Abrir Formulario **/
+.contenedor-btn .btn-abrir-formulario {
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 50px;
+	height: 50px;
+	font-size: 20px;
+	background: #ffc331;
+	color: #121212;
+	position: relative;
+	top: -25px;
+	z-index: 3;
+	border-radius: 100%;
+	padding: 15px;
+	transition: all .2s ease;
+	border: none;
+	cursor: pointer;
+}
+.contenedor-btn .btn-abrir-formulario:hover {
+	background: #ffcb48;
+}
+.contenedor-btn .btn-abrir-formulario.active {
+	transform: rotate(45deg);
+}
+
+/** Formulario Tarjeta **/
+.formulario-tarjeta {
+  margin: auto;
+	background: #fff;
+	width: 100%;
+	max-width: 700px;
+	padding: 150px 30px 30px 30px;
+	border-radius: 10px;
+	position: relative;
+	top: -150px;
+	z-index: 1;
+	clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	transition: clip-path .3s ease-out;
+}
+.formulario-tarjeta.active {
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+.formulario-tarjeta label {
+	display: block;
+	color: #7d8994;
+	margin-bottom: 5px;
+	font-size: 16px;
+}
+.formulario-tarjeta input,
+.formulario-tarjeta select,
+.btn-enviar {
+	border: 2px solid #e2e2e2;
+	font-size: 18px;
+	height: 50px;
+	width: 100%;
+	padding: 5px 12px;
+	transition: .3s ease all;
+	border-radius: 5px;
+}
+.formulario-tarjeta input:hover,
+.formulario-tarjeta select:hover {
+	border: 2px solid #ffd059;
+}
+.formulario-tarjeta input:focus,
+.formulario-tarjeta select:focus {
+	outline: #040404;
+	box-shadow: 1px 1px 5px -1px rgba(83, 83, 83, 0.3);
+}
+.formulario-tarjeta input {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+.formulario-tarjeta .flexbox {
+	display: flex;
+	justify-content: space-between;
+}
+.formulario-tarjeta .expira {
+	width: 100%;
+}
+.formulario-tarjeta .ccv {
+	min-width: 100px;
+}
+.formulario-tarjeta .grupo-select {
+	width: 100%;
+	margin-right: 15px;
+	position: relative;
+}
+.formulario-tarjeta select {
+	-webkit-appearance: none;
+}
+.formulario-tarjeta .grupo-select i {
+	position: absolute;
+	color: #CED6E0;
+	top: 18px;
+	right: 15px;
+	transition: .3s ease all;
+}
+.formulario-tarjeta .grupo-select:hover i {
+	color: #ffc331;
+}
+.formulario-tarjeta .btn-enviar {
+	border: none;
+	padding: 10px;
+	font-size: 22px;
+	color: #121212;
+	background: #ffc331;
+	cursor: pointer;
+}
+.formulario-tarjeta .btn-enviar:hover {
+	background: #ffd059;
+}
